@@ -4,6 +4,7 @@ import alpaca_backtrader_api
 import backtrader as bt
 from datetime import datetime
 from strategies.CriticalTradingMA import CritialTradingMA
+from strategies.donchainChannel import MyStrategy;
 
 
 ALPACA_API_KEY = "PKUJ260EM0RJROT06RRI"
@@ -16,7 +17,7 @@ You have 3 options:
  - paper trade (IS_BACKTEST=False, IS_LIVE=False)
  - live trade (IS_BACKTEST=False, IS_LIVE=True)
 """
-IS_BACKTEST = False
+IS_BACKTEST = True
 IS_LIVE = False
 symbol = "SPY"
 
@@ -96,7 +97,7 @@ if __name__ == '__main__':
     import logging
     logging.basicConfig(format='%(asctime)s %(message)s', level=logging.INFO)
     cerebro = bt.Cerebro()
-    cerebro.addstrategy(RSIStack)
+    cerebro.addstrategy(MyStrategy)
 
     store = alpaca_backtrader_api.AlpacaStore(
         key_id=ALPACA_API_KEY,
