@@ -15,7 +15,7 @@ loadEnv("PAPER")
 
 ALPACA_KEY_ID = os.getenv("APCA_API_KEY_ID")
 ALPACA_SECRET_KEY = os.getenv("APCA_API_SECRET_KEY")
-ALPACA_PAPER = True
+# ALPACA_PAPER = True
 
 IS_BACKTEST = False
 

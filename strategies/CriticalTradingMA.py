@@ -30,7 +30,8 @@ class CritialTradingMA(bt.Strategy):
             # print(self.position.size)
             if not self.position.size:
               print("BUY")
-              self.buy()
+              self.buy_bracket(data=s)
+              self.orefs
         elif self.data[0] > self.lo[0]:
             if self.position.size:
               print("SELL")
