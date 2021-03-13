@@ -5,11 +5,6 @@ import backtrader as bt
 from datetime import datetime
 from strategies.CriticalTradingMA import CritialTradingMA
 
-
-ALPACA_API_KEY = "PKUJ260EM0RJROT06RRI"
-ALPACA_SECRET_KEY = "284ebJOp702w8dc7V29CrD5zsxhfQaNjktV0sIe0"
-USE_POLYGON = False
-
 """
 You have 3 options:
  - backtest (IS_BACKTEST=True, IS_LIVE=False)

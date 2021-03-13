@@ -1,7 +1,6 @@
 from datetime import datetime
 
 from backtrader import position
-from indicators.HighHighLowLow import HighHighLowLow
 from indicators.DonchainChannels import DonchianChannels
 import backtrader as bt
 

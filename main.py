@@ -5,12 +5,14 @@ import backtrader as bt
 from datetime import datetime
 from strategies.CriticalTradingMA import CritialTradingMA
 from strategies.donchainChannel import MyStrategy;
+from settings import loadEnv
+import os
 
+loadEnv("PAPER")
 
-ALPACA_API_KEY = "PKUJ260EM0RJROT06RRI"
-ALPACA_SECRET_KEY = "284ebJOp702w8dc7V29CrD5zsxhfQaNjktV0sIe0"
-USE_POLYGON = False
-
+# Your credentials here
+ALPACA_API_KEY = os.getenv("APCA_API_KEY_ID")
+ALPACA_SECRET_KEY = os.getenv("APCA_API_SECRET_KEY")
 """
 You have 3 options:
  - backtest (IS_BACKTEST=True, IS_LIVE=False)
@@ -20,6 +22,7 @@ You have 3 options:
 IS_BACKTEST = True
 IS_LIVE = False
 symbol = "SPY"
+USE_POLYGON = False
 
 
 class SmaCross1(bt.Strategy):
